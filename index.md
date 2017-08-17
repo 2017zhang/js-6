@@ -1,37 +1,208 @@
-## Welcome to GitHub Pages
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>萝卜多后台管理系统</title>
+    <link rel="stylesheet" href="backstage.css" >
+    <link rel="stylesheet" href="https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://cdn.bootcss.com/jquery/2.1.1/jquery.min.js"></script>
+    <script src="https://cdn.bootcss.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</head>
+<body ng-app='routingDemoApp'  class="ng-scope">
+<div class="nav">
+    <div class="nav-lt">
+    <p class="name">admin</p>
+    <img class="nav-ig" src="images/05.png">
+    </div>
+</div>
+<div class="sideboard">
+    <h3>萝卜多后台管理系统</h3>
+    <ul>
+        <a href="#/0"><li   class="ad-p"><img class="sd-l" src="images/06.png">信息管理<img class="sd-r" src="images/07.png"></li></a>
+        <a href="#/1"><li  class="ad-p"><img class="sd-l" src="images/06.png">Article管理<img class="sd-r" src="images/07.png"></li></a>
+        <a href="#/2"><li class="ad-p"><img class="sd-l" src="images/06.png">后台管理<img class="sd-r" src="images/07.png"></li></a>
+    </ul>
+</div>
 
-You can use the [editor on GitHub](https://github.com/2017zhang/js-6/edit/master/index.md) to maintain and preview the content for your website in Markdown files.
+<div ng-view class="nav-r" id="nav-r-2">
+</div>
 
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
 
-### Markdown
+<script type="text/ng-template" id="0.html">
+    <div>
 
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
+    <h3>Welcome!</h3>
+    </div>
 
-```markdown
-Syntax highlighted code block
+</script>
 
-# Header 1
-## Header 2
-### Header 3
+<script type="text/ng-template" id="1.html">
+    <div class="main-t">
+        <div class="t-1">
+            <p>公司名称<input class="it-1"></p>
+            <p>公司行业<input></p>
+            <p>产品名称<input></p>
+        </div>
+        <div class="t-2">
+            <p>公司名称<input></p>
+            <p>公司名称<input></p>
+            <p>公司名称<input></p>
+        </div>
+        <div class="t-3">
+            <p>地区<input><input><input></p>
+        </div>
+        <div class="MTB">
+            <button class="MTB-l">清空</button>
+            <button class="MTB-2">搜索</button>
+        </div>
+    </div>
+    <div class="main-f">
+        <div class="f-1">
+            <h3>公司列表</h3>
+            <button class="f-bn">新增</button>
+        </div>
+        <div>
+            <table class="table table-striped">
+                <thead>
+                <tr>
+                    <th>序号</th>
+                    <th>公司名称</th>
+                    <th>公司行业</th>
+                    <th>地区</th>
+                    <th>融资规模</th>
+                    <th>邮认证状态</th>
+                    <th>冻结状态</th>
+                    <th>操作</th>
 
-- Bulleted
-- List
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                    <td>1</td>
+                    <td>Bangalore</td>
+                    <td>电子商务</td>
+                    <td>天津市-河北区</td>
+                    <td>天使轮</td>
+                    <td>未认证</td>
+                    <td>正常</td>
+                    <td>560001</td>
+                </tr>
+                <tr>
+                    <td>1</td>
+                    <td>Bangalore</td>
+                    <td>电子商务</td>
+                    <td>天津市-河北区</td>
+                    <td>天使轮</td>
+                    <td>未认证</td>
+                    <td>正常</td>
+                    <td>560001</td>
+                </tr>
+                <tr>
+                    <td>1</td>
+                    <td>Bangalore</td>
+                    <td>电子商务</td>
+                    <td>天津市-河北区</td>
+                    <td>天使轮</td>
+                    <td>未认证</td>
+                    <td>正常</td>
+                    <td>560001</td>
+                </tr>
+                <tr>
+                    <td>1</td>
+                    <td>Bangalore</td>
+                    <td>电子商务</td>
+                    <td>天津市-河北区</td>
+                    <td>天使轮</td>
+                    <td>未认证</td>
+                    <td>正常</td>
+                    <td>560001</td>
+                </tr>
+                <tr>
+                    <td>1</td>
+                    <td>Bangalore</td>
+                    <td>电子商务</td>
+                    <td>天津市-河北区</td>
+                    <td>天使轮</td>
+                    <td>未认证</td>
+                    <td>正常</td>
+                    <td>560001</td>
+                </tr>
 
-1. Numbered
-2. List
 
-**Bold** and _Italic_ and `Code` text
+                </tbody>
+            </table>
+        </div>
+    </div>
+    <div></div>
 
-[Link](url) and ![Image](src)
-```
+</script>
 
-For more details see [GitHub Flavored Markdown](https://guides.github.com/features/mastering-markdown/).
+<script type="text/ng-template" id="2.html">
+    <div class="main-t">
+        <div class="t-1">
+            <p>公司名称<input>——<input>类型<input></p></br>
+            <p class="t-1p">状态<input></p>
 
-### Jekyll Themes
+        </div>
+        <div class="MTB">
+            <button class="MTB-l">清空</button>
+            <button class="MTB-2">搜索</button>
+        </div>
+    </div>
+    <div class="main-f">
+        <div class="f-1">
+            <h3>Article列表</h3>
+            <button class="f-bn">新增</button>
+        </div>
+        <div>
+            <table class="table table-striped">
+                <thead>
+                <tr>
+                    <th>序号</th>
+                    <th>公司名称</th>
+                    <th>公司行业</th>
+                    <th>地区</th>
+                    <th>融资规模</th>
+                    <th>邮认证状态</th>
+                    <th>冻结状态</th>
+                    <th>操作</th>
 
-Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/2017zhang/js-6/settings). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                    <td>1</td>
+                    <td>Bangalore</td>
+                    <td>电子商务</td>
+                    <td>天津市-河北区</td>
+                    <td>天使轮</td>
+                    <td>未认证</td>
+                    <td>正常</td>
+                    <td>560001</td>
+                </tr>
 
-### Support or Contact
 
-Having trouble with Pages? Check out our [documentation](https://help.github.com/categories/github-pages-basics/) or [contact support](https://github.com/contact) and we’ll help you sort it out.
+
+                </tbody>
+            </table>
+        </div>
+    </div>
+    <div></div>
+
+
+</script>
+
+<script type="text/ng-template" id="3.html">
+    <div>
+        页面3
+    </div>
+</script>
+
+<script src="http://apps.bdimg.com/libs/angular.js/1.4.6/angular.min.js"></script>
+<script src="https://apps.bdimg.com/libs/angular-route/1.3.13/angular-route.js"></script>
+<script src="backstage.js"></script>
+
+</body>
+</html>
+
+
